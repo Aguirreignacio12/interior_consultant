@@ -6,10 +6,28 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-<h1>Hello world</h1>
+  <header class="header">
+    <div class="header__logo">this interior</div>
+    <input type="checkbox" id="toggle-menu" class="header__toggle-menu-checkbox">
+    <label for="toggle-menu" class="header__toggle-menu-label">
+      <span class="header__toggle-menu-line header__toggle-menu-line--top"></span>
+      <span class="header__toggle-menu-line header__toggle-menu-line--medium"></span>
+      <span class="header__toggle-menu-line header__toggle-menu-line--bottom"></span>
+    </label>
+    <nav class="header__menu">
+      <ul class="header__menu-list">
+        <li class="header__menu-item"><a href="#" class="header__menu-link">Inicio</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">Acerca</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">Servicios</a></li>
+        <li class="header__menu-item"><a href="#" class="header__menu-link">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+  
 </body>
 
 </html>
