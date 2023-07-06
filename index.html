@@ -6,68 +6,73 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Document</title>
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body>
-  <header class="header">
-    <div class="header__logo">this interior</div>
-    <input type="checkbox" id="toggle-menu" class="header__toggle-menu-checkbox">
-    <label for="toggle-menu" class="header__toggle-menu-label">
-      <span class="header__toggle-menu-line header__toggle-menu-line--top"></span>
-      <span class="header__toggle-menu-line header__toggle-menu-line--medium"></span>
-      <span class="header__toggle-menu-line header__toggle-menu-line--bottom"></span>
-    </label>
-    <nav class="header__menu">
-      <ul class="header__menu-list">
-        <li class="header__menu-item"><a href="#" class="header__menu-link">Inicio</a></li>
-        <li class="header__menu-item"><a href="#" class="header__menu-link">Acerca</a></li>
-        <li class="header__menu-item"><a href="#" class="header__menu-link">Servicios</a></li>
-        <li class="header__menu-item"><a href="#" class="header__menu-link">Contacto</a></li>
-      </ul>
-    </nav>
-  </header>
-  <section id="home" class="home">
-    <div class="home__container-presentation">
-      <h1 class="home__title">Modern interior</h1>
-      <p class="home__text">A full-Service residential & commercial interior design and staging company offering
-        professional organizing &
-        eco-services.</p>
-      <button class="button button--icon">
-        <span class="button__text">Read more</span>
-        <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-        <svg width="36.79px" height="23.32px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
-          <title />
-          <g id="Complete">
-            <g id="arrow-right">
-              <g>
-                <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#fff"
-                  stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
-                <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                  x1="2.5" x2="19.2" y1="12" y2="12" />
+  <div class="App">
+    <header class="header">
+      <div class="header__logo">this interior</div>
+      <input type="checkbox" id="toggle-menu" class="header__toggle-menu-checkbox">
+      <label for="toggle-menu" class="header__toggle-menu-label">
+        <span class="header__toggle-menu-line header__toggle-menu-line--top"></span>
+        <span class="header__toggle-menu-line header__toggle-menu-line--medium"></span>
+        <span class="header__toggle-menu-line header__toggle-menu-line--bottom"></span>
+      </label>
+      <nav class="header__menu">
+        <ul class="header__menu-list">
+          <li class="header__menu-item"><a href="#home" class="header__menu-link">Home</a></li>
+          <li class="header__menu-item"><a href="#  " class="header__menu-link">Collection</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">About</a></li>
+          <li class="header__menu-item"><a href="#" class="header__menu-link">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+    <section id="home" class="home">
+      <div class="home__presentation hidden">
+        <h1 class="home__title">Modern interior</h1>
+        <p class="home__text">A full-Service residential & commercial interior design and staging company offering
+          professional organizing &
+          eco-services.</p>
+        <button class="button button-hamburguer">
+          <span class="button__text">Read more</span>
+          <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
+          <svg width="36.79px" height="23.32px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <title />
+            <g id="Complete">
+              <g id="arrow-right">
+                <g>
+                  <polyline data-name="Right" fill="none" id="Right-2" points="16.4 7 21.5 12 16.4 17" stroke="#fff"
+                    stroke-linecap="round" stroke-linejoin="round" stroke-width="2" />
+                  <line fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                    x1="2.5" x2="19.2" y1="12" y2="12" />
+                </g>
               </g>
             </g>
-          </g>
-        </svg>
-      </button>
-    </div>
-    <div class="home__container-image">
-      <img class="home__image" src="./image-00.jpg" alt="fotografia de decoracion">
-      <div class="card">
-        <img class="card__image" src="./image-card.png" alt="Imagen de perfil">
-        <div class="card__info">
-          <h2 class="card__name">Aliza Webber</h2>
-          <p class="card__profession">Interior designer</p>
-        </div>
-        <div class="card__description">
-          <p>Designed in 2020 by Aliza Webber</p>
+          </svg>
+        </button>
+      </div>
+      <div class="home__container-image">
+        <img class="home__image hidden" src="./assets/images/image-00.jpg" alt="fotografia de decoracion">
+        <div class="card hidden">
+          <div class="container-image">
+            <img class="card__image" src="./assets/images/image-card.png" alt="Imagen de perfil">
+          </div>
+          <div class="card__info">
+            <h2 class="card__name">Aliza Webber</h2>
+            <p class="card__profession">Interior designer</p>
+          </div>
+          <div class="card__description">
+            <p>Designed in 2020 by Aliza Webber</p>
+          </div>
         </div>
       </div>
-    </div>
-  </section>
-  <footer>
-    <p>created by <strong>AguirreIgnacio12</strong> - devChallenges.io</p>
-  </footer>
+    </section>
+    <footer>
+      <p>created by <strong>AguirreIgnacio12</strong> - devChallenges.io</p>
+    </footer>
+  </div>
+  <script src="./assets/js/app.js"></script>
 </body>
 
 </html>

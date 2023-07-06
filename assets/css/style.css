@@ -1,0 +1,372 @@
+@import url('https://fonts.googleapis.com/css2?family=Caveat:wght@600&family=Crimson+Pro:wght@200&family=Grandiflora+One&family=Lora:wght@500;700&family=Montserrat:wght@500;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background: #181719;
+  color: #FFFFFF;
+  min-height: calc(100vh - 4em);
+  width: 100%;
+  height: auto;
+  position: relative;
+}
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+/*ANIMACION SOBRE EN EL ONLOAD DE LOS ELEMENTOS*/
+
+/* Establece la opacidad inicial de carga en 0 */
+.hidden {
+  opacity: 0;
+  /* Ajuste de duración y el tipo de transición*/
+}
+
+.home__presentation.hidden {
+  transition: opacity 0.6s ease-in-out;
+}
+
+.home__image.hidden {
+  transition: opacity 1.2s ease-in-out;
+}
+
+.card.hidden {
+  transition: opacity 1s ;
+}
+
+
+/* Cuando cargue completamente, establece la opacidad*/
+.loaded {
+  opacity: 1;
+}
+
+.App {
+  max-width: 1440px;
+  margin: 0 auto;
+}
+
+/* Estilos generales del encabezado */
+.header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.4em .75em;
+  font-size: 14px;
+  height: 4em;
+}
+
+/* Estilos del logo */
+.header__logo {
+  font-weight: bold;
+  padding: .4em;
+  text-transform: uppercase;
+  font-family: 'Crimso Pro';
+  border: 1px solid #FFFFFF;
+}
+
+/* Estilos del botón hamburguesa */
+.header__toggle-menu-checkbox {
+  display: none;
+}
+
+.header__toggle-menu-label {
+  display: inline-block;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 4px;
+  position: relative;
+}
+
+
+.header__toggle-menu-line {
+  display: block;
+  width: 25px;
+  height: 3px;
+  background-color: #F2F2F2;
+  margin-bottom: 5px;
+}
+
+.header__toggle-menu-checkbox:checked~.header__toggle-menu-line {
+  background-color: red;
+}
+
+/* Estilos del menú */
+.header__menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  left: -100%;
+  width: 100%;
+  background-color: #181719;
+  z-index: 1;
+  transition: left 0.3s ease;
+}
+
+.header__menu-list {
+  list-style: none;
+}
+
+.header__menu-item {
+  padding: 10px;
+}
+
+.header__menu-link {
+  color: #fff;
+  font-family: 'Montserrat';
+  font-weight: 500;
+  position: relative;
+  text-decoration: none;
+}
+
+.header__menu-link:after {
+  content: "";
+  position: absolute;
+  background-color: #ccc;
+  height: 2px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: .3s ease-out;
+}
+
+.header__menu-link:hover {
+  font-weight: 700;
+}
+
+.header__menu-link:hover:after {
+  width: 100%;
+}
+
+/* Estilos del menú visible */
+.header__toggle-menu-checkbox:checked~.header__menu {
+  left: 0;
+}
+
+.header__menu-link:active~.header__menu {
+  left: 0;
+}
+
+
+/* Estilos del enlace del menú activo */
+.header__menu-link:active {
+  color: #ccc;
+}
+
+.home {
+  display: flex;
+  flex-direction: column;
+  padding: 0 .75em;
+  gap: 3vh;
+  min-height: 90vh;
+  position: relative;
+}
+
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  border: none;
+  background-color: transparent;
+  color: #fff;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.button__icon {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin-left: 10px;
+  /* Ajusta el espaciado entre el icono y el texto */
+}
+
+.home__presentation {
+  display: flex;
+  flex-direction: column;
+  gap: 1.563em;
+}
+
+.home__text {
+  width: 60%;
+}
+
+.home__container-image {
+  position: relative;
+}
+
+.home__image {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.home__title {
+  font-family: 'Lora', 'sans-serif';
+  font-weight: 500;
+  font-size: 36px;
+}
+
+.home__text {
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 17.07px;
+}
+
+.button {
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: 700;
+}
+
+.card {
+  position: absolute;
+  background: #181719;
+  display: grid;
+  align-items: center;
+  gap: 1em;
+  padding: 1em;
+  top: 80%;
+  right: 5%;
+  max-width: 410px;
+  grid-template-columns: 80px 200px repeat(2, 1fr);
+  grid-auto-rows: 3.313rem;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  transition: box-shadow .1s transform;
+}
+.card:hover{
+  box-shadow: 0px 0px 50px rgba(0, 0, 0, 1);
+}
+
+.container-image {
+  width: 100%;
+  height: 64px;
+}
+
+.card__image {
+  width: 100%;
+  grid-column: 1;
+  grid-row: 1;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+.card__info {
+  grid-column: 2/5;
+  grid-row: 1;
+}
+
+.card__name {
+  font-size: 12px;
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: 500;
+}
+
+.card__profession {
+  font-size: 10px;
+  color: #888;
+  font-family: 'Montserrat', 'sans-serif';
+  font-weight: 500;
+}
+
+.card__description {
+  grid-row: 2;
+  font-size: 18px;
+  grid-column: 1 / 5;
+  font-family: 'Lora', 'sans-serif';
+  font-weight: 700;
+}
+
+footer {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Montserrat', 'sans-serif';
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 17px;
+  /* identical to box height */
+  color: #A9A9A9;
+  padding: 0 0 1em 0;
+}
+
+@media screen and (min-width:768px) {
+  body {
+    padding: 0 2em;
+  }
+
+  .home {
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(6, 1fr);
+    align-items: center;
+  }
+
+  .home__presentation {
+    grid-column: 1 / 3;
+    width: 100%;
+  }
+
+  .home__text {
+    width: 100%;
+  }
+
+  .home__container-image {
+    grid-column: 3/7;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .card {
+    top: 85%;
+  }
+}
+
+@media screen and (min-width:1440px) {
+  .header {
+    font-size: 18px;
+  }
+
+  .home__title {
+    font-size: 48px;
+  }
+
+  .home__text {
+    font-size: 24px;
+    line-height: 29.26px;
+    top: 100%;
+  }
+
+  .card {
+    top: 90%;
+  }
+
+  .card__name {
+    font-size: 14px;
+    font-family: 'Montserrat', 'sans-serif';
+    font-weight: 500;
+  }
+
+  .card__profession {
+    font-size: 12px;
+
+  }
+
+  .card__description {
+    font-size: 24px;
+  }
+}
